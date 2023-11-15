@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 public class TestHomePage extends TestBase {
     LoginPage loginObject;
+    HomePage homePageObject;
+
     @Test(priority =1)
     public void loginsuccessful(){
         loginObject=new LoginPage(driver);
@@ -15,20 +17,21 @@ public class TestHomePage extends TestBase {
         homePageObject=new HomePage(driver);
         Assert.assertEquals(homePageObject.assertionLoginMessages(),"Products");
     }
-    HomePage homePageObject;
-
-
     @Test(priority=2)
+        public void selectoptionfromDropdown(){
+        homePageObject=new HomePage(driver);
+        homePageObject.salectOneOption();
+    }
+    @Test(priority=3)
     public void selectItems(){
         homePageObject=new HomePage(driver);
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        homePageObject.SelectItem();
+        Assert.assertEquals(homePageObject.assertionDropdown(),"Test.allTheThings() T-Shirt (Red)");
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        homePageObject.SelectItems();
     }
-
-    @Test(priority=3)
+    @Test(priority=4)
     public void openthecart (){
-       // driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
         homePageObject.openCart();
     }
-
 }

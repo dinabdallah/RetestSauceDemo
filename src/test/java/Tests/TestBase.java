@@ -28,10 +28,10 @@ public WebDriver driver;
     //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     driver.get("https://www.saucedemo.com/");
 }
-
-@AfterSuite
+/*
+@AfterClass
     public void closedriver(){
     driver.quit();
 }
-
+*/
 }

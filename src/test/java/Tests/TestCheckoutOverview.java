@@ -17,22 +17,27 @@ public class TestCheckoutOverview extends TestBase{
         Assert.assertEquals(homePageObject.assertionLoginMessages(),"Products");
 
     }
-
     @Test(priority=2)
-    public void selectItems(){
+    public void selectoptionfromDropdown(){
         homePageObject=new HomePage(driver);
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        homePageObject.SelectItem();
+        homePageObject.salectOneOption();
     }
 
     @Test(priority=3)
+    public void selectItems(){
+        homePageObject=new HomePage(driver);
+        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        homePageObject.SelectItems();
+    }
+
+    @Test(priority=4)
     public void openthecart (){
         homePageObject.openCart();
         cartPageObject=new CartPage(driver);
         Assert.assertEquals(cartPageObject.assertionmeassge(),"Your Cart");
     }
 
-    @Test(priority=4)
+    @Test(priority=5)
     public void openCheckoutPage(){
         cartPageObject=new CartPage(driver);
         cartPageObject.clickonCheckoutLink();
@@ -41,13 +46,13 @@ public class TestCheckoutOverview extends TestBase{
 
     }
 
-    @Test(priority=5)
+    @Test(priority=6)
     public void CheckoutSuccessful(){
         CheckoutObject=new CheckOutPage(driver);
         CheckoutObject.checkOut("standard_user","standard_user","1234567");
     }
 
-    @Test(priority=6)
+    @Test(priority=7)
             public void OverviewSuccessful(){
         CheckoutOverviewObject=new CheckoutOverview(driver);
         Assert.assertEquals(CheckoutOverviewObject.assertionOverview(),"Checkout: Overview");
