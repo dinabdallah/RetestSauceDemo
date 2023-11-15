@@ -12,7 +12,7 @@ public class TestBase {
 
 public WebDriver driver;
 
-@BeforeSuite
+@BeforeClass
 @Parameters({"browser"})
 
     public void setupdriver(@Optional("chrome") String browserName){
@@ -28,10 +28,10 @@ public WebDriver driver;
     //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     driver.get("https://www.saucedemo.com/");
 }
-/*
+
 @AfterSuite
     public void closedriver(){
     driver.quit();
 }
-*/
+
 }

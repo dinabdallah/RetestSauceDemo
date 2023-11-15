@@ -5,47 +5,18 @@
     <test verbose="2" preserve-order="true" name="C:/Users/ET/Desktop/TestAutomationFramawork">
         <classes>
             <class name="Tests.TestLoginPage">
-                <methods>
-                    <include name="loginsuccessful"/>
-                </methods>
-
             </class>
 
             <class name="Tests.TestHomePage">
-                <methods>
-                    <include name="loginsuccessful"/>
-                    <include name="selectItems"/>
-                    <include name="openthecart"/>
-                </methods>
             </class>
 
             <class name="Tests.TestCartPage">
-                <methods>
-                    <include name="loginsuccessful"/>
-                    <include name="selectItems"/>
-                    <include name="openthecart"/>
-                    <include name="openCheckoutPage"/>
-                </methods>
             </class>
+
             <class name="Tests.TestCheckOutPage">
-                <methods>
-                    <include name="loginsuccessful"/>
-                    <include name="selectItems"/>
-                    <include name="openthecart"/>
-                    <include name="openCheckoutPage"/>
-                    <include name="CheckoutSuccessful"/>
-                </methods>
             </class>
 
             <class name="Tests.TestCheckoutOverview">
-                <methods>
-                    <include name="loginsuccessful"/>
-                    <include name="selectItems"/>
-                    <include name="openthecart"/>
-                    <include name="openCheckoutPage"/>
-                    <include name="CheckoutSuccessful"/>
-                    <include name="OverviewSuccessful"/>
-                </methods>
             </class>
 
         </classes>
